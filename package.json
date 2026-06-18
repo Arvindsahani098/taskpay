@@ -1,0 +1,29 @@
+{
+  "name": "taskpay",
+  "version": "2.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0",
+    "@capacitor/core": "^5.0.0",
+    "@capacitor/android": "^5.0.0",
+    "@capacitor/app": "^5.0.0",
+    "@capacitor/haptics": "^5.0.0",
+    "@capacitor/status-bar": "^5.0.0",
+    "@capacitor-community/admob": "^5.0.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "cap:sync": "npx cap sync android",
+    "cap:open": "npx cap open android",
+    "apk:debug": "npm run build && npx cap sync android && cd android && ./gradlew assembleDebug",
+    "apk:release": "npm run build && npx cap sync android && cd android && ./gradlew assembleRelease"
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead"],
+    "development": ["last 1 chrome version"]
+  }
+}
